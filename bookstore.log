@@ -1,0 +1,6 @@
+1745306249286:help
+1745306265085:list book
+1745306829724:create book
+1745306875005:create book --title Valami --price 123 --publisher KiadoKFT --author Valaki
+1745307056954:help
+1745307062381:list books
