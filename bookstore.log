@@ -16,3 +16,19 @@
 1745911075495:list bookstores
 1745911473630:delete bookstore --id 5
 1745911476599:list bookstores
+1746512396897:help
+1746512813627:list bookstores
+1746512925930:create bookstore --location P�sp�klad�ny --priceModifier 1.1 --moneyInCashRegister 10.0
+1746512929611:list bookstores
+1746513853585:update bookstore --id 4 --location Debrecen2
+1746513858797:list bookstores
+1746514938373:help
+1746514942597:list books
+1746514954524:find prices 1
+1746514973013:find prices 3
+1746515956241:list books
+1746515992132:find books filtered --title Az aranyember
+1746516008028:find books filtered --title "Az aranyember"
+1746516122884:find books filtered --title "Az aranyemeber"
+1746516332987:list books
+1746516349320:filter books --title "Az aranyember"

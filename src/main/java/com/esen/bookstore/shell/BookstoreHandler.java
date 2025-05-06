@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.shell.standard.ShellCommandGroup;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
+import org.springframework.shell.standard.ShellOption;
 
 import java.util.stream.Collectors;
 
@@ -34,5 +35,22 @@ public class BookstoreHandler {
         bookstoreService.delete(id);
     }
 
+    @ShellMethod(value = "Create a bookstore", key = "create bookstore")
+    public void createBookstore(String location, Double priceModifier, Double moneyInCashRegister){
+        bookstoreService.save(Bookstore.builder()
+                .location(location)
+                .priceModifier(priceModifier)
+                .moneyInCashRegister(moneyInCashRegister)
+                .build());
+    }
+
+    @ShellMethod(value = "Update a bookstore", key = "update bookstore")
+    public void updateBookstore(@ShellOption(defaultValue = ShellOption.NULL) Long id,
+                                @ShellOption(defaultValue = ShellOption.NULL) String location,
+                                @ShellOption(defaultValue = ShellOption.NULL) Double priceModifier,
+                                @ShellOption(defaultValue = ShellOption.NULL) Double moneyInCashRegister) {
+
+        bookstoreService.update(id, location, priceModifier, moneyInCashRegister);
+    }
 
 }
